@@ -1,0 +1,56 @@
+Requirements:
+1. Create an automated test file or written test plan for the most critical or risk-prone functionality related to this feature. If you choose to create an automated
+test file, it can be written in the language/framework of your choice, but cypress.io is preferred. The code is not expected to actually be executable, but it should
+be written as if it were able to be run against the QA environment when this feature was deployed.
+
+2. Please answer the following short-response questions:
+a. How would you approach testing at each stage of the development process for this feature?
+    
+    Planning: Digest the requirements to understand the complexity of the feature under test and provide as accurate as possible of an estimation for the scope of work.
+    Including designs as provided by the design team to ensure dev outcome meets design and functional expectations.
+
+    Development/Sprint execution phase: Write test steps based off of designs and UAC provided modifying or adjusting as necessary.  Monitor Jira project / communicate
+    with devs to understand when features are completed and pushed to which environment or branch, pull code down to QA server as necessary and execute tests as soon as
+    features are ready to be tested.  As new features are completed and pushed, new tests for newly completed features should be executed as well as tests for previously
+    completed tests. Once all features are completed all sprint related tests should be executed.  If issues come up at any point I will do my best to triage and
+    troubleshoot the issue before approaching dev or logging a defect.  Once all sprint tests pass, execute smoke and/or regression suite tests.
+
+    Retrospective: Discuss any misses in estimates or unexpected issues that may have come up and understand how to make improvements for the next sprint. What went well,
+    what could have gone better, and develop a plan for the next sprint.
+    
+b. How would you work with the Dev team and at what points in the process?
+
+    After I have exhausted all troubleshooting possible using the browser dev tools, wiki or documentation, and team mentor/leads I would approach the dev with all the
+    information gathered, steps to reproduce the issue and troubleshooting completed.  The best timing to approach the dev largely depends on the working dynamics of the
+    team / relationship but generally speaking ASAP is the best approach unless the PM or project has set another process.
+
+c. How would you handle UAC failing during different times in the process?
+
+    This is tricky, but generally speaking it takes understanding and monitoring the progress of feature readiness during a sprint.  If it worked at one deploy to QA you
+    have to look at what features were added between the two deploys and try to understand the way the two might interact or conflict then troubleshoot as much as possible
+    and report/communicate with team leads, mentors or project manager / log defects as necessary.
+
+3. If you were going to be on vacation the day this feature was deployed to staging and needed to be smoke tested, quickly write/explain the steps needed to verify
+this feature is working as intended and ready for release to production. Pretend as if this would be handed off to the Product Owner to verify the feature.
+
+    I would explain how to execute any automated tests necessary to verify my work and provide clear steps to manual tests.  Furthermore I would explain certain areas
+    of the application or feature under test that has either displayed flakiness or I felt were high risk.
+
+4. What other areas would you want to smoke/regression test alongside this feature before it is released?
+
+    Without having in depth knowledge yet of the application under test, calculations for cart totals using various items, quantities, discount codes, should be tested to ensure
+    correct cart totals.  Depending on all available discount codes that might be available those should be tested to ensure accurate calculations in correlation to volume based
+    discounts.
+
+5. Identify risks associated with this feature.
+
+    Risks are heavily around cart totals based on type and quantities of kits added to the cart and what and when discounts are applied to cart.  This is a high risk feature as
+    it pertains to financial profit to the company.
+
+6. Imagine that certain bugs were discovered late in the testing/integration process and the feature was
+supposed to deploy tomorrow. How would you communicate the issues to the product owner? Would these issues block or delay the release? Why or why not?
+
+    There are various methods to label bugs, T-shirt size (S, M, L) color (Green, Yellow, Red) so I would familiarize myself with the method that is used at everly and
+    apply that here.  Something like a design bug, IE something rendering a bit off on a smaller screen size (phone or tablet) might be labeled as T-shirt size 'S' or
+    color green and may not block or delay the release, however a late bug around cart totals or discount calculations might be labeled as T-shirt size 'L' or color red.
+    I would just state the findings to the product owner and explain my concerns and reasoning for the severity levels applied.
