@@ -1,0 +1,32 @@
+Scenario: As a buyer, I want to get a discount when I purchase five items of the same product so that I'm incentivized to buy more.
+  1. Navigate to everlywell.com
+  2. Click on Food Sensitivity Comprehensive Test
+  3. Select 5 in the quantity drop down
+  4. Click Add to Cart
+  5. Confirm incentive is applied and subtotal equals $299
+
+Scenario: As a buyer, if I purchase 4 items of the same product, and one different product I should not received volume based discounts
+  1. Navigate to everlywell.com
+  2. Click on Food Sensitivity Comprehensive Test
+  3. Select 4 in the quantity drop down
+  4. Click Add to Cart
+  5. Confirm incentive is NOT applied and subtotal equals $1196
+
+Scenario: As a buyer, if I add five of the same products to the cart I should see the volume based discount, but if I remove one I should no longer see the volume based discount
+  1. Navigate to everlywell.com
+  2. Click on Food Sensitivity Comprehensive Test
+  3. Select 5 in the quantity drop down
+  4. Click Add to Cart
+  5. Confirm incentive is applied and subtotal equals $299
+  6. Select 4 from the quantity drop down
+  7. Confirm incentive is NOT applied and subtotal equals $1196
+
+Scenario: As a buyer, if I have a twenty percent off total order discount code, when I add five of the same kits to the cart, then my total should the price of one kit minus twenty percent
+  1. Navigate to everlywell.com
+  2. Click on Food Sensitivity Comprehensive Test
+  3. Select 5 in the quantity drop down
+  4. Click Add to Cart
+  5. Click the plus sign next to "Have a promo code?"
+  6. Enter the 20 percent off promo code
+  7. Confirm the twenty percent off coupon applied successfully
+  8. Confirm the subtotal equals that of one test minus 20% $239.20
