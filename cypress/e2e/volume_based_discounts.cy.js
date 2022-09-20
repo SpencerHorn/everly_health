@@ -13,9 +13,9 @@ describe('Discounts', () => {
       // Select and confirm quantitiy of 5 from quantity drop down
       cy.getByDataId("productQuantity").eq(0).select(4).should('have.value', 5)
       // Click add to cart
-      cy.get('[data-testid="addToCartButton"]').click()
+      cy.getByDataId("addToCartButton").click()
       // Confirm cart Subtotal equals that of one test
-      cy.get('[data-testid="cart-subtotal"]').contains('$299.00')
+      cy.getByDataId("cart-subtotal").contains('$299.00')
     })
 
   })
