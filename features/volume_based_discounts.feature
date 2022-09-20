@@ -21,7 +21,7 @@ Scenario: As a buyer, I want to get a discount when I purchase five items of the
   Then I should see a volume based discount
   And my total should be equal to that of one Food Sensitivity Comprehensive Test
 
-Scenario: As a buyer, if I purchase 4 items of the same product, and one different product I should not received volume based discounts
+Scenario: As a buyer, if I purchase four items of the same product, and one different product I should not received volume based discounts
   Given I add four Food Sensitivity Comprehensive Tests to my cart
   And I dismiss any popups that appear
   When I click Proceed to Checkout
