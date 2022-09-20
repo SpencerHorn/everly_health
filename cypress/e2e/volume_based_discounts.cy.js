@@ -1,13 +1,13 @@
 describe('Discounts', () => {
   beforeEach(() => {
+    // Launch and confirm on landing page
     cy.visit('https://www.everlywell.com')
+    cy.title().should('eq', 'Everlywell - Innovative at-home Health Testing')
   })
 
   context("Volume based discounts", () => {
 
     it('As a buyer, I want to get a discount when I purchase five items of the same product so that I am incentivized to buy more.', () => {
-      // Launch and confirm on landing page
-      cy.title().should('eq', 'Everlywell - Innovative at-home Health Testing')
       // Click on Food Sensitivity Comprehensive Test
       cy.getByDataId("productCard").eq(0).click()
       // Select and confirm quantitiy of 5 from quantity drop down
@@ -19,8 +19,6 @@ describe('Discounts', () => {
     })
 
     it('As a buyer, if I purchase 4 items of the same product, and one different product I should not received volume based discounts', () => {
-      // Launch and confirm on landing page
-      cy.title().should('eq', 'Everlywell - Innovative at-home Health Testing')
       // Click on Food Sensitivity Comprehensive Test
       cy.getByDataId("productCard").eq(0).click()
       // Select and confirm quantitiy of 4 from quantity drop down
@@ -32,8 +30,6 @@ describe('Discounts', () => {
     })
 
     it('As a buyer, if I add five of the same products to the cart I should see the volume based discount, but if I remove one I should no longer see the volume based discount', () => {
-      // Launch and confirm on landing page
-      cy.title().should('eq', 'Everlywell - Innovative at-home Health Testing')
       // Click on Food Sensitivity Comprehensive Test
       cy.getByDataId("productCard").eq(0).click()
       // Select and confirm quantitiy of 5 from quantity drop down
@@ -53,8 +49,6 @@ describe('Discounts', () => {
   context("Discount Codes", () => {
 
     it('As a buyer, if I have a twenty percent off total order discount code, when I add five of the same kits to the cart, then my total should the price of one kit minus twenty percent', () => {
-      // Launch and confirm on landing page
-      cy.title().should('eq', 'Everlywell - Innovative at-home Health Testing')
       // Click on Food Sensitivity Comprehensive Test
       cy.getByDataId("productCard").eq(0).click()
       // Select and confirm quantitiy of 5 from quantity drop down
