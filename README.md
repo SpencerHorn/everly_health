@@ -17,3 +17,7 @@ Execute test:
   cucumber --format pretty RUN_LOCAL=true BROWSER=firefox --tags @volume_based_1  
   
   BROWSER options: firefox, chrome, headless  
+  
+Run Cypress
+  ./node_modules/.bin/cypress open
+  execute tests /cypress/e2e/volume_based_discounts.cy.js
