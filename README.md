@@ -18,6 +18,6 @@ Execute test:
   
   BROWSER options: firefox, chrome, headless  
   
-Run Cypress
-  ./node_modules/.bin/cypress open
+Run Cypress<br>
+  ./node_modules/.bin/cypress open<br>
   execute tests /cypress/e2e/volume_based_discounts.cy.js
