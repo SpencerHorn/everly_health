@@ -14,11 +14,6 @@ Install Gems:
   confirm gems install successfully
 
 Execute test:  
-  cucumber --format pretty RUN_LOCAL=true BROWSER=firefox --tags @search_test_1  
+  cucumber --format pretty RUN_LOCAL=true BROWSER=firefox --tags @volume_based_1  
   
   BROWSER options: firefox, chrome, headless  
-  --tags options: @search (will run all tests with this tag, search_test_2 & @search_test_3 not implements per challenge requirements)  
-                  @search_test_1 will run indivdual test with this tag  
-                  @search_test_2 will run indivdual test with this tag (not implemented)  
-                  @search_test_3 will run indivdual test with this tag (not implemented)  <br>
-<br>
